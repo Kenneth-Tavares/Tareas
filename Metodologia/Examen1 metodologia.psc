@@ -3,9 +3,9 @@ Proceso MenuOpciones
     Definir continuar Como Caracter
 	
     Repetir
-        Escribir "Seleccione una opción:"
-        Escribir "1. Calcular el área de un triángulo"
-        Escribir "2. Determinar si un número es par o impar"
+        Escribir "Seleccione una opciÃ³n:"
+        Escribir "1. Calcular el Ã¡rea de un triÃ¡ngulo"
+        Escribir "2. Determinar si un nÃºmero es par o impar"
         Escribir "3. Mostrar la tabla de multiplicar"
         Escribir "4. Calcular el promedio de notas"
         Escribir "5. Salir"
@@ -23,12 +23,12 @@ Proceso MenuOpciones
             5: 
                 Escribir "Saliendo del programa..."
             De Otro Modo:
-                Escribir "Opción no válida. Intente nuevamente."
+                Escribir "OpciÃ³n no vÃ¡lida. Intente nuevamente."
         FinSegun
 		
         // Preguntar si desea continuar o salir
         Si opcion <> 5 Entonces
-            Escribir "¿Desea realizar otra operación? (S/N)"
+            Escribir "Â¿Desea realizar otra operaciÃ³n? (S/N)"
             Leer continuar
         Sino
             continuar <- "N"
@@ -36,7 +36,7 @@ Proceso MenuOpciones
 		
     Hasta Que continuar = "N" O continuar = "n"
     
-    Escribir "Gracias por usar el programa. ¡Hasta luego!"
+    Escribir "Gracias por usar el programa. Â¡Hasta luego!"
 FinProceso
 
 SubProceso CalcularAreaTriangulo
@@ -53,15 +53,15 @@ SubProceso DeterminarParImpar
 	Escribir "Ingrese un numero entero:"
 	Leer numero
 	Si numero MOD 2 = 0 Entonces
-        Escribir "El número ", numero, " es par."
+        Escribir "El nÃºmero ", numero, " es par."
     Sino
-        Escribir "El número ", numero, " es impar."
+        Escribir "El nÃºmero ", numero, " es impar."
     FinSi
 FinSubProceso
 
 SubProceso TablaMultiplicar
 	Definir num, i Como Entero
-    Escribir "Ingrese un número entero para ver su tabla de multiplicar:"
+    Escribir "Ingrese un nÃºmero entero para ver su tabla de multiplicar:"
     Leer num
     Para i <- 1 Hasta 10 Con Paso 1 Hacer
         Escribir num, " x ", i, " = ", num * i
